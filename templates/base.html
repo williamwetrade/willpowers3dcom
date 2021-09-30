@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="{{url_for('static', filename='JavaScript/parameters.js')}}" async defer></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.3.1.min.js" integrity="sha384-YF85VygJKMVnHE+lLv2AM93Vbstr0yo2TbIu5v8se5Rq3UQAUmcuh4aaJwNlpKwa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.3.1.min.js" integrity="sha384-KKuas3gevv3PvrlkyCMzffFeaMq5we/a2QsP5AUoS3mJ0jmaCL7jirFJN3GoE/lM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.3.1.min.js" integrity="sha384-MK/uFc3YT18pkvvXRl66tTHjP0/dxoSH2e/eiNMFIguKlun2+WVqaPTWmUy/zvh4" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+    <style>
+        .source-pre {
+            font-family: Courier, monospace;
+            white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+            white-space: -pre-wrap; /* Opera */
+            white-space: -o-pre-wrap; /* Opera */
+            white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+            word-wrap: break-word; /* IE 5.5+ */
+            background-color: #222222;
+            color: lightgrey;
+            padding: 1.2em !important;
+            font-size: 1.2em;
+        }
+
+        #headline {
+            color: darkgrey;
+        }
+
+        .bk-toolbar {
+            position: fixed;
+        }
+
+        .slick-header-column {
+            background-color: #707070 !important;
+            background-image: none !important;
+            font-size: 130%;
+        }
+
+        .slick-row.even {
+            background-color: #404040 !important;
+        }
+
+        .slick-row.odd {
+            background-color: #333333 !important;
+        }
+
+        .bk-root .bk-bs-nav-tabs > li.bk-bs-active > span {
+            background-color: #666666 !important;
+            color: #bbbbbb !important;
+            border-color: #666666 !important;
+        }
+
+        .bk-root .bk-bs-nav > li > span:hover {
+            background-color: #666666 !important;
+            border-color: #666666 !important;
+            color: #bbbbbb !important;
+        }
+
+        .bk-tooltip {
+            border-radius: 3px;
+            background-color: #4C4F51 !important;
+            border-color: #4C4F51 !important;
+        }
+
+        .bk-tooltip-row-label {
+            color: #848EFF !important;
+        }
+
+        .bk-tooltip-row-value {
+            color: #aaaaaa !important;
+        }
+
+        .label {
+            font-weight: bold;
+            line-height: 1.6em;
+        }
+
+        .table-title > div {
+            display: block !important;
+        }
+
+        .table-title > div > .bk {
+            font-weight: bold;
+            font-size: 1.1em;
+            line-height: 1.6em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .table-info {
+            padding-bottom: .6em;
+        }
+
+        .panel-title > div {
+            display: block !important;
+        }
+
+        .panel-title > div > .bk {
+            font-weight: bold;
+            font-size: 1.5em;
+            line-height: 2.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .config-title > div {
+            display: block !important;
+            padding-top: 1em !important;
+            padding-bottom: .6em !important;
+        }
+
+        .config-title > div > .bk {
+            font-weight: bold;
+            font-size: 1.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.typekit.net/vfc2hvy.css" />
+    <link href="/static/CSS/stylesheet.css" rel="stylesheet">
+    <title>William Powers</title>
+</head>
+
+<body class="bg-dark text-light">
+{% include 'navbar.html' %}
+
+{% block content %}
+
+{% endblock %}
+
+<!-- Optional JavaScript; choose one of the two! -->
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
